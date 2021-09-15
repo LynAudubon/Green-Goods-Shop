@@ -1,0 +1,45 @@
+{
+  "name": "Green-Goods-Shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "serve": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LynAudubon/Green-Goods-Shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LynAudubon/Green-Goods-Shop/issues"
+  },
+  "homepage": "https://github.com/LynAudubon/Green-Goods-Shop#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.1",
+    "mongoose": "^6.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.1",
+    "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
+    "nodemon": "^2.0.12",
+    "sass": "^1.39.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.0"
+  }
+}
