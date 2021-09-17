@@ -29,6 +29,7 @@
 
 .info_price {
     font-weight: bold;
+
 }
 
 .info_name {
@@ -41,12 +42,18 @@
     font-family: "Playfair Display", Helvitica, "san serif";
 }
 
-.info_description {
+.info_button {
     display: block;
     width: 100%;
     text-decoration: none;
     text-align: center;
-    color: #3C403D;
-    background: #f4f4f4;
-    padding: 0px;
+    background: #DADED4;
+    padding: 8px 16px;
+    border: 1px solid none;
+    border-radius: 1.5px;
+    color: #39603D;
+}
+
+.info_button:hover {
+    background: pink;
 }

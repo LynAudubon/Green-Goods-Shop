@@ -18,7 +18,7 @@ const Product = () => {
         </div>
         <div>
             <p>$30.99</p>
-            <Link className="info_button">View</Link>
+            <Link className="info_button">Details</Link>
         </div>
         </div>
     )
