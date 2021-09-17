@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "node backend/server.js",
     "serve": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
@@ -19,12 +20,18 @@
   },
   "homepage": "https://github.com/LynAudubon/Green-Goods-Shop#readme",
   "dependencies": {
+    "axios": "^0.21.4",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongodb": "^4.1.1",
     "mongoose": "^6.0.5",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
