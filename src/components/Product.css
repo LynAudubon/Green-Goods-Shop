@@ -29,7 +29,8 @@
 
 .info_price {
     font-weight: bold;
-
+    text-align: center;
+    
 }
 
 .info_name {
