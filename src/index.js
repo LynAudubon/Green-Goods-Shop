@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
 import './App.scss';
+import './index.css';
 
 const appElement = document.getElementById('root');
 

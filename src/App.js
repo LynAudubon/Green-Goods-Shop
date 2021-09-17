@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+// import './App.scss';
 import {BrowserRouter as Router, Switch, Route}  from 'react-router-dom'//import react router library on top of React to provide frontend routing and navigation functionalities in React apps
 //
 
