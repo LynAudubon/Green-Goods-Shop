@@ -11,6 +11,8 @@ const HomePage = () => {
             </h2>
              <div className='homepage_products'>
                 <Product />
+                <Product />
+                <Product />
             </div>
         </div>
     );
