@@ -10,12 +10,23 @@ const Navbar = () => {
             </div>
             <ul className='navbarlinks'>
                 <li>
-                   <Link to="/cart">
+                    <Link to='/' className='plants'>Plants</Link>
+                </li>
+                <li>
+                    Sign-in
+                </li>
+                <li>
+                   <Link to="/cart" className='cart_link'>
                    <i className="fas fa-shopping-cart"></i>
                    <span className='cartdisplay'>0</span>
                    </Link> 
                 </li>
             </ul>
+            <div className="hamburger__menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </nav>
     );
 }

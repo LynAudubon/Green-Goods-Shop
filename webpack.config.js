@@ -3,11 +3,13 @@ const path = require('path');
 module.exports = {
     output: {
         path: path.resolve(__dirname, '/dist'),
-        filename: 'index.bundle.js'
+        filename: 'index.bundle.js',
+        publicPath: '/',
     },
     devServer: {
         port: 8080,
-        compress: true
+        compress: true,
+        historyApiFallback: true,
     },
     module: {
         rules: [
@@ -19,7 +21,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(css|scss)$/,
                 use: [
                     'style-loader',
                     'css-loader',

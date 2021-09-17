@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node backend/server.js",
     "serve": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "client": "nodemon app.js",
+    "build": "rm -rf && webpack --mode production",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "import": "node backend/importData.js"
   },
   "repository": {
     "type": "git",
