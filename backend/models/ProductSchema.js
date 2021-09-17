@@ -1,3 +1,4 @@
+const { MongoExpiredSessionError } = require('mongodb');
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
@@ -6,7 +7,8 @@ const productSchema = new mongoose.Schema({
         required: true
     },
     id: {
-        type: String, 
+        type: String,
+        content: Mixed, 
         required: true
     },
     description: {
