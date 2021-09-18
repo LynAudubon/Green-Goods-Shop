@@ -12,11 +12,11 @@ export const getProductsReducer = (state = { products : []}, action) => {
                 loading: false,
                 products: action.payload,
             };
-        case actionTypes.GET_PRODUCTS_FAIL:
-            return {
-                loading: false,
-                products: action.payload,
-            };
+        // case actionTypes.GET_PRODUCTS_FAIL:
+        //     return {
+        //         loading: false,
+        //         products: action.payload,
+        //     };
         default: return state;
     }
 };

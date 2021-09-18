@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.scss';
+import ErrorBoundary from './components/ErrorBoundary'
 import {BrowserRouter as Router, Switch, Route}  from 'react-router-dom'//import react router library on top of React to provide frontend routing and navigation functionalities in React apps
 //
 
@@ -15,8 +15,11 @@ import Navbar from './components/Navbar';
 
  export function App() {
     return (
+        
         <Router>
+            {/* <ErrorBoundary /> */}
             <Navbar />
+            <h2 className="hello">Hello World! Today is {new Date().toDateString()}.</h2>
             <main>
                 <Switch>
                     <Route exact path='/' component={HomePage}/>
@@ -24,9 +27,8 @@ import Navbar from './components/Navbar';
                     <Route exact path='/cart' component={CartPage}/>
                 </Switch>
              </main>
-            <h2>Hello World! Today is {new Date().toDateString()}.</h2>
-        </Router>
-    );
+                    </Router>
+            );
 };
  
 // export default App;// doesn't work if using webpack???
