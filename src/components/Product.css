@@ -29,7 +29,8 @@
 
 .info_price {
     font-weight: bold;
-
+    text-align: center;
+    color: rgb(124, 120, 120)
 }
 
 .info_name {

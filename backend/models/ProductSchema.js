@@ -6,11 +6,6 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    id: {
-        type: String,
-        content: Mixed, 
-        required: true
-    },
     description: {
         type: String, 
         required: true
