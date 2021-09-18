@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Navbar.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -16,8 +16,8 @@ const Navbar = () => {
                     Sign-in
                 </li>
                 <li>
-                   <Link to="/cart" className='cart_link'>
-                   <i className="fas fa-shopping-cart"></i>
+                   <Link to='/cart' className='cart_link'>
+                   <i className='fas fa-shopping-cart'></i>
                    <span className='cartdisplay'>0</span>
                    </Link> 
                 </li>

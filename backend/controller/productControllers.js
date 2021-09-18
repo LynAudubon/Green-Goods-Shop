@@ -1,6 +1,6 @@
 const Product = require('../models/ProductSchema');
 
-const getProducts = async(req, res) => {
+const getAllProducts = async (req, res) => {
     try {
         const products = await Product.find({});
         res.json(products);
@@ -10,15 +10,15 @@ const getProducts = async(req, res) => {
     }
 };
 
-const getProductById = async(req, res) => {
+const getProductById = async (req, res) => {
     //req.params.id
     // req
     //req.body 
     try {
-        const products = await Product.findById(req.params.id);
+        const product = await Product.findById(req.params.id);
         
 
-        res.json(products);
+        res.json(product);
     } catch (error) {
         console.log(error);
         res.status(500).json({message: "Server Error"});
@@ -26,6 +26,6 @@ const getProductById = async(req, res) => {
 };
 
 module.exports = {
-    getProducts, 
+    getAllProducts, 
     getProductById
 };

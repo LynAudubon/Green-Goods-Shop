@@ -7,6 +7,8 @@ import {BrowserRouter as Router, Switch, Route}  from 'react-router-dom'//import
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import CartPage from './pages/CartPage';
+import './App.scss';
+import './index.css';
 
 //Components
 import Navbar from './components/Navbar';
