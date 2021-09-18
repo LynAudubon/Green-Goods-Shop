@@ -1,30 +1,39 @@
 import * as actionTypes from '../constants/productConstants';
+import {useDispatch} from 'react-redux';
 import axios from 'axios';
 import 'regenerator-runtime/runtime';
 
-export const getProducts = () => async (dispatch) => {
-    try {
+export const getProducts = () => async () => {
+    const dispatch = useDispatch();
+        try {
         dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST });
 
-        const { data } = await axios.get('/api/products');
+        const data = await axios.get('/api/products');
+        console.log(data);
 
         dispatch({
             type: actionTypes.GET_PRODUCTS_SUCCESS,
             payload: data,
          });
         } catch (error) {
-            dispatch({
+                dispatch({
                 type: actionTypes.GET_PRODUCTS_FAIL,
                 payload: error.response && error.response.data.message ? error.response.data.message:error.message
             });
         }
     }
 
-    export const getProductDetails = (id) => async (dispatch) => {
+    export const getProductDetails = (id) => async () => {
+        const dispatch = useDispatch();
         try {
             dispatch({ types: actionTypes.GET_PRODUCT_DETAILS_REQUEST });
     
-            const { data } = await axios.get(`/api/products/${id}`);
+            const { data } = await axios.get(`/api/products/${id}`)
+            .then((response) => {})
+            .catch((error) => {
+            console.log(error);
+            })
+            
     
             dispatch({
                 type: actionTypes.GET_PRODUCT_DETAILS_SUCCESS,
@@ -38,7 +47,8 @@ export const getProducts = () => async (dispatch) => {
             }
         };
 
-    export const removeProductDetails = () => async (dispatch) => {
+    export const removeProductDetails = () => async () => {
+        const dispatch = useDispatch();
             dispatch({
                 type: actionTypes.GET_PRODUCT_DETAILS_RESET
             })
