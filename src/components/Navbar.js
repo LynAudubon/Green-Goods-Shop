@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Navbar.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({click}) => {
     return (
         <nav className='navbar'>
             <div className='navbarlogo'> 
@@ -10,19 +10,19 @@ const Navbar = () => {
             </div>
             <ul className='navbarlinks'>
                 <li>
-                    <Link to='/' className='plants'>Plants</Link>
+                    <Link to='/' className='plants'>Shop Plants</Link>
                 </li>
                 <li>
                     Sign-in
                 </li>
                 <li>
-                   <Link to="/cart" className='cart_link'>
-                   <i className="fas fa-shopping-cart"></i>
+                   <Link to='/cart' className='cart_link'>
+                   <i className='fas fa-shopping-cart'></i>
                    <span className='cartdisplay'>0</span>
                    </Link> 
                 </li>
             </ul>
-            <div className="hamburger__menu">
+            <div className="hamburger__menu" onClick={click}>
                 <div></div>
                 <div></div>
                 <div></div>

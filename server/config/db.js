@@ -1,5 +1,5 @@
-//purpose of config file???
-require('dotenv').config();//is there a work around to requiring dotenv
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
