@@ -24,7 +24,7 @@ import SideDrawer from './components/SideDrawer';
         <Router>
             <Navbar click={() => setSideToggle(true)}/>
             <Backdrop show={sideToggle} click={() => setSideToggle(false)}/>
-            <SideDrawer show={sideToggle}/>
+            <SideDrawer show={sideToggle} click={() => setSideToggle(false)}/>
             <h2 className="hello">Hello World! Today is {new Date().toDateString()}.</h2>
             <main>
                 <Switch>

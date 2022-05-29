@@ -25,6 +25,7 @@
   "homepage": "https://github.com/LynAudubon/Green-Goods-Shop#readme",
   "dependencies": {
     "axios": "^0.21.4",
+    "caniuse-lite": "^1.0.30001344",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
