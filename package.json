@@ -7,10 +7,10 @@
   "scripts": {
     "start": "node server/server.js",
     "serve": "webpack serve --mode development",
-    "client": "nodemon ",
+    "client": "",
     "build": "rm -rf && webpack --mode production",
     "dev": "concurrently \"npm start\" \"npm run serve\"",
-    "import": "node server/importData.js"
+    "data:import": "node server/importData.js"
   },
   "repository": {
     "type": "git",

@@ -2,19 +2,16 @@ import React, {Component} from 'react';
 import './ProductPage.css';
 import {useState, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-
 import { getProductDetails } from '../redux/actions/productActions';
 
 
 const ProductPage = ({match, history}) => {
     const dispatch = useDispatch();
-
     const productDetails = useSelector(state => state.getProductDetails);
-
     const { loading, error, product } = productDetails;
 
     useEffect(() => {
-        if (product && match.params.id !== product_id) {
+        if (product && match.params.id !== product.id) {
            dispatch(getProductDetails(match.params.id))
        }
     }, [dispatch, product, match]);

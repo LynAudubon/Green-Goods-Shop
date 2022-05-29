@@ -12,6 +12,12 @@ const products = [
     price: 35.00,
     numberInStock: 30, 
     imageUrl: "https://images.unsplash.com/photo-1598880940080-ff9a29891b85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80' alt='\(Asplenium Nidus\)"
+    },
+    {
+    name: "Bird's-nest Fern (Asplenium Nidus)",description:"Asplenium nidus forms large simple fronds visually similar to banana leaves, with the fronds growing to 50-150 centimetres (20-59 in) long and 10-20 centimetres (3.9-7.9 in) broad. A. nidus belongs to the \"Neottopteris clade\" members of which generally have somewhat leathery leaf tissue. The fronds roll back as they brown and create a massive leaf nest in the branches and trunks of trees. Asplenium nidus is native to east tropical Africa (in Tanzania, inclusive of the Zanzibar Archipelago); temperate and tropical Asia (in Indonesia; East Timor; the prefecture of Kyushu, and the Ryukyu Islands of Japan; Malaysia; the Philippines; Taiwan; and Thailand); and in Australasia (in the northern part of Queensland in Australia).[8]  It thrives in warm, humid areas in partial to full shade. It dislikes direct sunlight and likes to be in full shade on the north facing garden wall.With a minimum temperature of 10 °C (50 °F), Asplenium nidus is widely cultivated in temperate regions as a houseplant.", 
+    price: 49,
+    numberInStock: 24, 
+    imageUrl: "https://images.unsplash.com/photo-1615213612138-4d1195b1c0e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80"
     }
 ]
 
