@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Product.css'
-import {Link} from 'react-router-dom'
+import { Link}  from 'react-router-dom'
 
 const Product = ({ imageUrl, name, price, description, productId }) => {
         return (
@@ -13,7 +13,7 @@ const Product = ({ imageUrl, name, price, description, productId }) => {
             <p className='info_description'>{description.substring(0, 100)}...</p>
         </div>
         <div className='info_price'><p>Price: ${price}</p>
-        <Link to={`/products/${productId}`} className="info_button">Details</Link>
+        <Link to={`/product/${productId}`} className="info_button">Details</Link>
         </div>
         </div>
     );

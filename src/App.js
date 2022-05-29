@@ -1,24 +1,30 @@
 import React from 'react';
-import ErrorBoundary from './components/ErrorBoundary'
-import {BrowserRouter as Router, Switch, Route}  from 'react-router-dom'//import react router library on top of React to provide frontend routing and navigation functionalities in React apps
-//
+import { BrowserRouter as Router, Switch, Route }  from 'react-router-dom';
+import {  useState } from 'react';
 
-//Webpages
+
+//Pages
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import CartPage from './pages/CartPage';
+
+//css
 import './App.scss';
 import './index.css';
 
 //Components
 import Navbar from './components/Navbar';
+import Backdrop from './components/Backdrop';
+import SideDrawer from './components/SideDrawer';
+
 
  export function App() {
+     const [sideToggle, setSideToggle ] = useState(false);
     return (
-        
         <Router>
-            {/* <ErrorBoundary /> */}
-            <Navbar />
+            <Navbar click={() => setSideToggle(true)}/>
+            <Backdrop show={sideToggle} click={() => setSideToggle(false)}/>
+            <SideDrawer show={sideToggle}/>
             <h2 className="hello">Hello World! Today is {new Date().toDateString()}.</h2>
             <main>
                 <Switch>
@@ -27,8 +33,7 @@ import Navbar from './components/Navbar';
                     <Route exact path='/cart' component={CartPage}/>
                 </Switch>
              </main>
-                    </Router>
-            );
+        </Router>
+    );
 };
  
-// export default App;// doesn't work if using webpack???
