@@ -46,7 +46,7 @@ transform: translateX(0);
     color: white;
 }
 
-.sidedrawer-links > li > a  > span {
+.sidedrawer-links > li > a > span {
     display: flex;
     align-items: center;
     margin: 15px;
