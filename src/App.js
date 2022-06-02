@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route }  from 'react-router-dom';
 import {  useState } from 'react';
 
-
 //Pages
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
 import CartPage from './pages/CartPage';
+ require('react-dom');
 
 //css
 import './App.scss';
@@ -20,6 +20,7 @@ import SideDrawer from './components/SideDrawer';
 
  export function App() {
      const [sideToggle, setSideToggle ] = useState(false);
+     
     return (
         <Router>
             <Navbar click={() => setSideToggle(true)}/>

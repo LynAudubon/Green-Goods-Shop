@@ -9,11 +9,12 @@
     z-index: 50;
 }
 
-.navbarlogo {
+.navbarlogo > a {
     color: #f4f4f4;
     font-family: "Playfair Display", "san serif", Helvetica;
     font-size: 1.4rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .navbarlinks {
@@ -24,6 +25,8 @@ list-style: none;
 
 .navbarlinks > li {
     padding: 1.5rem;
+    color: pink;
+    font-family: "Playfair Display", "san serif", Helvetica;
 }
 
 .navbarlinks > li > a {

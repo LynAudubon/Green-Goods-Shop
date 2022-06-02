@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "proxy": "http://127.0.0.1:5000",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
     "serve": "webpack serve --mode development",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/LynAudubon/Green-Goods-Shop#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
     "axios": "^0.21.4",
     "caniuse-lite": "^1.0.30001344",
     "cors": "^2.8.5",
@@ -31,8 +32,7 @@
     "express": "^4.17.1",
     "mongodb": "^4.1.1",
     "mongoose": "^6.0.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "node-polyfill-webpack-plugin": "^1.1.4",
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.3.0",
     "redux": "^4.1.1",
@@ -48,6 +48,7 @@
     "concurrently": "^6.2.1",
     "css-loader": "^6.2.0",
     "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.12",
     "sass": "^1.39.2",
     "sass-loader": "^12.1.0",
@@ -55,5 +56,9 @@
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   }
 }

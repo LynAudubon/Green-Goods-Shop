@@ -1,6 +1,6 @@
 import * as actionTypes from '../constants/cartConstants';
 
-export const cartReducer = (state = { cartItems: [] }, action) => {
+export const cartReducer = (state = {cartItems: []}, action) => {
     switch(action.type) {
         case actionTypes.ADD_TO_CART:
             const item = action.payload;//product id of item in client browser selected to be added; the payload value of action object
@@ -14,7 +14,8 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
                 };
             }else {
                 return {
-                    ...state, cartItems: [...state.cartItems, item],
+                    ...state, 
+                    cartItems: [...state.cartItems, item],
                 };
             }
         case actionTypes.REMOVE_FROM_CART: 
@@ -23,6 +24,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
                 cartItems: state.cartItems.filter((x) => x.product !== action.payload)
             }
 
-    default: return state;
+    default: 
+        return state;
     }
-}
+};

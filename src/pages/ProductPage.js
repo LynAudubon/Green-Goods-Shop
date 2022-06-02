@@ -8,6 +8,7 @@ import { getProductDetails } from '../redux/actions/productActions';
 const ProductPage = ({match, history}) => {
     const dispatch = useDispatch();
     const productDetails = useSelector(state => state.getProductDetails);
+    
     const { loading, error, product } = productDetails;
 
     useEffect(() => {
@@ -27,25 +28,26 @@ const ProductPage = ({match, history}) => {
                         />
                     </div>  
                     <div className="left_info">
-                        <p className="left_name">"{product. name}</p>
+                        <p className="left_name">{product.name}</p>
                         <p>Price: ${product.price}</p>
-                        <p>{product.description}</p>
+                        <p>Description: {product.description.substring(0,100)}...</p>
                     </div>
                 </div>
                 <div className="productpage__right">
                     <div className="right_info">
                         <p> Price: <span>${product.price} </span></p>
-                        <p> Price: <span> {product.numberInStock > 0 ? "In Stock" : "Out of Stock"} </span></p>
+                        <p> Stock: <span> {product.numberInStock > 0 ? "In Stock" : "Out of Stock"} </span></p>
                         <p>
+                            Qty
                             <select>
-                                <option value="1"></option>
-                                <option value="2"></option>
-                                <option value="3"></option>
-                                <option value="4"></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
                             </select>
                         </p>
                         <p>
-                            <button type='button'>Add To Cart</button>
+                            <button type="button">Add To Cart</button>
                         </p>
                     </div>
                 </div>

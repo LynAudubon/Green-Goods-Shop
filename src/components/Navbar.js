@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom'
 const Navbar = ({click}) => {
     return (
         <nav className='navbar'>
-            <div className='navbarlogo'> 
-                <h3> Green Goods.</h3> 
+            <div className='navbarlogo'>
+                <Link to='/'>
+                    <h3> Green Goods.</h3> 
+                </Link>
             </div>
             <ul className='navbarlinks'>
                 <li>
