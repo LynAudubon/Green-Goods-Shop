@@ -1,21 +1,28 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './ProductPage.css';
 import {useState, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { getProductDetails } from '../redux/actions/productActions';
+import { addToCart } from '../redux/actions/cartActions';
 
 
-const ProductPage = ({match, history}) => {
+const ProductPage = ({ match, history }) => {
     const dispatch = useDispatch();
+
+    const [qty, setQty] = useState(1);
     const productDetails = useSelector(state => state.getProductDetails);
-    
     const { loading, error, product } = productDetails;
 
     useEffect(() => {
-        if (product && match.params.id !== product.id) {
+        if (product && match.params.id !== product._id) {
            dispatch(getProductDetails(match.params.id))
        }
     }, [dispatch, product, match]);
+
+    const addToCartHandler = () => {
+        dispatch(addToCart(product._id, qty));
+        history.push('/cart');
+    }
 
     return (
         <div className='productpage'>
@@ -30,7 +37,7 @@ const ProductPage = ({match, history}) => {
                     <div className="left_info">
                         <p className="left_name">{product.name}</p>
                         <p>Price: ${product.price}</p>
-                        <p>Description: {product.description.substring(0,100)}...</p>
+                        <p>Description: {product.description}...</p>
                     </div>
                 </div>
                 <div className="productpage__right">
@@ -39,15 +46,14 @@ const ProductPage = ({match, history}) => {
                         <p> Stock: <span> {product.numberInStock > 0 ? "In Stock" : "Out of Stock"} </span></p>
                         <p>
                             Qty
-                            <select>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
+                            <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                                {[...Array(product.numberInStock).keys()].map((x) => {
+                                    return <option key={x+1} value={x+1}>{x+1}</option>
+                                })};
                             </select>
                         </p>
                         <p>
-                            <button type="button">Add To Cart</button>
+                            <button type="button" onClick={() => addToCartHandler()}>Add To Cart</button>
                         </p>
                     </div>
                 </div>

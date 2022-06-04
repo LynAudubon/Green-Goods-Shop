@@ -8,18 +8,16 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'index.bundle.js',
-        // publicPath: '/',
     },
     devServer: {
         port: 9090,
         compress: true,
-        historyApiFallback: true,
-        // proxy: {
-        //     "/api/*": {
-        //         target: `http://localhost:${process.env.PORT}`
-        //     }
-        // }
+        historyApiFallback: true
     },
+     optimization: {
+        minimize: false
+    },
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -28,9 +26,6 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react'],
-                    }
                 }
             },
             {

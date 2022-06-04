@@ -16,11 +16,7 @@ app.use(express.static('dist'));
 const DIST_DIR = path.join(__dirname, '../dist');
 const HTML_FILE = path.join(DIST_DIR, 'index.html');
 
-
-// app.use(express.static('src'));
-// const DIST_DIR = path.join(__dirname, '../src');
-// const HTML_FILE = path.join(DIST_DIR, 'index.html');
-
+app.use('/api/products', productRoutes);
 
 app.get('/', (req, res) => {
     res.sendFile(HTML_FILE, function(err) {
@@ -29,8 +25,6 @@ app.get('/', (req, res) => {
         }
     });
 });
-
-app.use('/api/products', productRoutes);
 
 const PORT = process.env.PORT||5000;
 

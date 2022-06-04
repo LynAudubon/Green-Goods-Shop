@@ -1,11 +1,9 @@
 import * as actionTypes from '../constants/productConstants';
-import {useDispatch} from 'react-redux';
 import axios from 'axios';
 import 'regenerator-runtime/runtime';
 
 
-export const getProducts = () => async() => {
-    const dispatch = useDispatch();
+export const getProducts = () => async(dispatch) => {
         try {
         dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST });
 
@@ -25,19 +23,19 @@ export const getProducts = () => async() => {
         }
 };
 
-export const getProductDetails = (id) => async () => {
-    const dispatch = useDispatch();
-
+export const getProductDetails = (id) => async(dispatch) => {
+    console.log('details', id);
     try {
         dispatch({ 
-            types: actionTypes.GET_PRODUCT_DETAILS_REQUEST 
+            type: actionTypes.GET_PRODUCT_DETAILS_REQUEST,
         });
 
         const { data } = await axios.get(`/api/products/${id}`);
+        console.log('fetch', data);
 
         dispatch({
             type: actionTypes.GET_PRODUCT_DETAILS_SUCCESS,
-            payload: data,
+            payload: data
             });
         } catch (error) {
             dispatch({
@@ -47,9 +45,7 @@ export const getProductDetails = (id) => async () => {
         }
 };
 
-export const removeProductDetails = () => async () => {
-    const dispatch = useDispatch();
-
+export const removeProductDetails = () => (dispatch) => {
         dispatch({
             type: actionTypes.GET_PRODUCT_DETAILS_RESET
         });

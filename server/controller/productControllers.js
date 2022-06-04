@@ -1,4 +1,5 @@
 const Product = require('../models/ProductSchema');
+// import { ObjectId } from 'mongodb';
 
 const getAllProducts = async (req, res) => {
     try {
@@ -12,10 +13,9 @@ const getAllProducts = async (req, res) => {
 };
 
 const getProductById = async (req, res) => {
-    //req.params.id
-    // req
-    //req.body 
-    try {
+    console.log('reqID', req.params.id)
+    //   const id = new ObjectId(req.params.id);
+        try {
         const product = await Product.findById(req.params.id);
         res.status(200).json(product);
 
